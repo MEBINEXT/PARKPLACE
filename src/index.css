@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 99.6%;
+    --foreground: 0 0% 5.5%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 5.5%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 5.5%;
+
+    --primary: 205 79% 41%;
+    --primary-foreground: 0 0% 100%;
+
+    --primary-dark: 210 88% 28%;
+    --primary-dark-foreground: 0 0% 100%;
+
+    --secondary: 210 7% 57%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 20% 96%;
+    --muted-foreground: 210 7% 57%;
+
+    --accent: 205 79% 95%;
+    --accent-foreground: 205 79% 41%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 14% 89%;
+    --input: 210 14% 89%;
+    --ring: 205 79% 41%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 205 79% 41%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 20% 96%;
+    --sidebar-accent-foreground: 0 0% 5.5%;
+    --sidebar-border: 210 14% 89%;
+    --sidebar-ring: 205 79% 41%;
+
+    --footer-bg: 210 20% 12%;
+    --footer-foreground: 210 20% 85%;
+
+    --glass-bg: 0 0% 100% / 0.65;
+    --glass-border: 0 0% 100% / 0.3;
+  }
+
+  .dark {
+    --background: 0 0% 5.5%;
+    --foreground: 0 0% 99.6%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 99.6%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 99.6%;
+    --primary: 205 79% 41%;
+    --primary-foreground: 0 0% 100%;
+    --primary-dark: 210 88% 28%;
+    --primary-dark-foreground: 0 0% 100%;
+    --secondary: 210 7% 57%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 210 10% 18%;
+    --muted-foreground: 210 7% 57%;
+    --accent: 205 79% 15%;
+    --accent-foreground: 205 79% 70%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 10% 22%;
+    --input: 210 10% 22%;
+    --ring: 205 79% 41%;
+    --footer-bg: 210 20% 8%;
+    --footer-foreground: 210 20% 85%;
+    --glass-bg: 0 0% 10% / 0.65;
+    --glass-border: 0 0% 100% / 0.1;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .glass {
+    background: hsl(var(--glass-bg));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--glass-border));
+  }
+
+  .glass-strong {
+    background: hsl(0 0% 100% / 0.8);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 1px solid hsl(0 0% 100% / 0.4);
+    box-shadow: inset 0 1px 0 0 hsl(0 0% 100% / 0.3), 0 8px 32px hsl(210 20% 12% / 0.08);
+  }
+
+  .glass-primary {
+    background: hsl(205 79% 41% / 0.12);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid hsl(205 79% 41% / 0.2);
+  }
+
+  .glass-dark {
+    background: hsl(210 20% 12% / 0.7);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid hsl(0 0% 100% / 0.08);
+  }
+
+  .glass-btn {
+    background: hsl(var(--glass-bg));
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid hsl(var(--glass-border));
+    box-shadow: inset 0 1px 0 0 hsl(0 0% 100% / 0.25), 0 4px 16px hsl(210 20% 12% / 0.06);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .glass-btn:hover {
+    background: hsl(0 0% 100% / 0.85);
+    box-shadow: inset 0 1px 0 0 hsl(0 0% 100% / 0.4), 0 8px 32px hsl(210 20% 12% / 0.12);
+    transform: translateY(-1px);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Stagger animation for mobile menu */
+@keyframes stagger-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.stagger-item {
+  animation: stagger-fade-in 0.4s ease-out forwards;
+  opacity: 0;
+}
