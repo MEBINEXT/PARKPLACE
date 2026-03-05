@@ -13,7 +13,7 @@ const Footer = () => {
               <span className="text-primary-foreground font-bold">PLACE</span>
               <span className="text-primary-foreground font-light"> S.L</span>
             </h3>
-            <p className="text-xs tracking-[0.3em] text-primary mb-4 font-heading font-medium">
+            <p className="text-xs tracking-[0.3em] text-white/90 mb-4 font-heading font-medium">
               CONSTRUCTORA — ALMERÍA
             </p>
             <p className="text-sm leading-relaxed text-footer-foreground/80">
@@ -23,20 +23,20 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="text-lg font-heading font-semibold text-primary-foreground mb-6">
+            <h4 className="text-lg font-heading font-semibold text-white mb-6">
               Contacto
             </h4>
-            <div className="space-y-4 text-sm">
+            <div className="space-y-4 text-sm text-white/90">
               <div className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-primary" />
+                <Phone className="w-4 h-4 text-white/70" />
                 <span>+34 722 403 999</span>
               </div>
               <div className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-primary" />
+                <Mail className="w-4 h-4 text-white/70" />
                 <span>contacto@parkplace.es</span>
               </div>
               <div className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-primary mt-0.5" />
+                <MapPin className="w-4 h-4 text-white/70 mt-0.5" />
                 <div>
                   <p>Calle Ejemplo, 1</p>
                   <p>04001 Almería, España</p>
@@ -47,20 +47,20 @@ const Footer = () => {
 
           {/* Social */}
           <div>
-            <h4 className="text-lg font-heading font-semibold text-primary-foreground mb-6">
+            <h4 className="text-lg font-heading font-semibold text-white mb-6">
               Síguenos
             </h4>
             <div className="space-y-3">
               <a
                 href="#"
-                className="flex items-center gap-3 text-sm text-footer-foreground/80 hover:text-primary transition-colors"
+                className="flex items-center gap-3 text-sm text-footer-foreground/80 hover:text-white transition-colors"
               >
                 <Instagram className="w-5 h-5" />
                 Instagram
               </a>
               <a
                 href="#"
-                className="flex items-center gap-3 text-sm text-footer-foreground/80 hover:text-primary transition-colors"
+                className="flex items-center gap-3 text-sm text-footer-foreground/80 hover:text-white transition-colors"
               >
                 <Facebook className="w-5 h-5" />
                 Facebook
@@ -70,22 +70,22 @@ const Footer = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-footer-foreground/20 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-footer-foreground/60">
+        <div className="border-t border-white/20 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-footer-foreground/80">
           <p>
             Plataforma desarrollada por{" "}
-            <a href="https://mebinext.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">
+            <a href="https://mebinext.com" target="_blank" rel="noopener noreferrer" className="text-white hover:underline font-bold">
               MEBI NEXT
             </a>{" "}
             2026 © PARK PLACE S.L. Todos los derechos reservados.
           </p>
           <div className="flex items-center gap-4">
-            <Link to="/terminos-y-condiciones" className="hover:text-primary transition-colors">
+            <Link to="/terminos-y-condiciones" className="hover:text-white transition-colors">
               Términos y Condiciones
             </Link>
-            <Link to="/politica-de-privacidad" className="hover:text-primary transition-colors">
+            <Link to="/politica-de-privacidad" className="hover:text-white transition-colors">
               Política de Privacidad
             </Link>
-            <Link to="/politica-de-cookies" className="hover:text-primary transition-colors">
+            <Link to="/politica-de-cookies" className="hover:text-white transition-colors">
               Política de Cookies
             </Link>
           </div>

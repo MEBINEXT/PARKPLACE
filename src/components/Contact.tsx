@@ -1,15 +1,6 @@
-import { useState } from "react";
-import { MapPin, Phone, Mail, Send } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    alert("Mensaje enviado correctamente. Nos pondremos en contacto pronto.");
-    setFormData({ name: "", email: "", phone: "", message: "" });
-  };
-
   return (
     <section id="contacto" className="py-28 bg-muted">
       <div className="container mx-auto px-4">
@@ -25,63 +16,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          {/* Form */}
-          <form onSubmit={handleSubmit} className="glass-strong rounded-2xl p-8 space-y-5">
-            <div>
-              <label className="block text-sm font-heading font-medium text-foreground mb-1.5">Nombre</label>
-              <input
-                type="text"
-                required
-                value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full rounded-xl border border-border bg-background/50 px-4 py-3.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring transition-all"
-                placeholder="Su nombre completo"
-              />
-            </div>
-            <div className="grid sm:grid-cols-2 gap-5">
-              <div>
-                <label className="block text-sm font-heading font-medium text-foreground mb-1.5">Email</label>
-                <input
-                  type="email"
-                  required
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full rounded-xl border border-border bg-background/50 px-4 py-3.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring transition-all"
-                  placeholder="correo@ejemplo.com"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-heading font-medium text-foreground mb-1.5">Teléfono</label>
-                <input
-                  type="tel"
-                  value={formData.phone}
-                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="w-full rounded-xl border border-border bg-background/50 px-4 py-3.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring transition-all"
-                  placeholder="+34 600 000 000"
-                />
-              </div>
-            </div>
-            <div>
-              <label className="block text-sm font-heading font-medium text-foreground mb-1.5">Mensaje</label>
-              <textarea
-                required
-                rows={5}
-                value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                className="w-full rounded-xl border border-border bg-background/50 px-4 py-3.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none transition-all"
-                placeholder="Describa brevemente su proyecto..."
-              />
-            </div>
-            <button
-              type="submit"
-              className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-primary-foreground font-heading font-semibold px-8 py-4 rounded-xl transition-all duration-300 text-sm tracking-wide hover:shadow-lg hover:-translate-y-0.5"
-            >
-              <Send className="w-4 h-4" />
-              Enviar Mensaje
-            </button>
-          </form>
-
+        <div className="max-w-xl mx-auto">
           {/* Info */}
           <div className="flex flex-col justify-center space-y-6">
             {[

@@ -34,41 +34,40 @@ export const CookieConsent = () => {
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: 20, scale: 0.95 }}
                     transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-                    className="fixed bottom-6 right-6 z-[100] w-full max-w-sm sm:max-w-md p-6 rounded-2xl shadow-2xl backdrop-blur-md border border-[#88929b]/30 bg-[#fefefe]/95"
+                    className="fixed bottom-6 left-4 right-4 sm:left-auto sm:right-6 z-[100] w-auto sm:w-full max-w-sm mx-auto sm:mx-0 p-8 rounded-2xl shadow-2xl backdrop-blur-md border border-[#88929b]/30 bg-[#fefefe]/95"
                 >
-                    <div className="flex items-start gap-4">
-                        <div className="mt-1 flex-shrink-0">
+                    <div className="flex flex-col gap-6 text-left">
+                        <div className="flex items-center gap-3">
                             <Cookie className="w-6 h-6 text-[#1777bd]" />
-                        </div>
-                        <div className="flex-1">
-                            <h4 className="text-lg font-bold font-display tracking-tight mb-2 text-[#0e0e0e]">
+                            <h4 className="text-xl font-bold font-display tracking-tight text-[#0e0e0e]">
                                 Protocolo de Cookies
                             </h4>
-                            <p className="text-sm font-body leading-relaxed mb-4 text-[#88929b]">
-                                Utilizamos cookies estrictamente técnicas para el correcto funcionamiento de la plataforma y recordar tus preferencias. No usamos rastreadores publicitarios.{' '}
-                                <Link
-                                    to="/politica-de-cookies"
-                                    onClick={() => window.scrollTo(0, 0)}
-                                    className="underline decoration-1 underline-offset-2 text-[#1777bd] hover:text-[#084882] transition-colors font-medium"
-                                >
-                                    Política de Cookies
-                                </Link>
-                            </p>
+                        </div>
 
-                            <div className="flex flex-col sm:flex-row gap-3">
-                                <button
-                                    onClick={handleAccept}
-                                    className="flex-1 px-4 py-2.5 rounded-lg text-sm font-medium tracking-wide transition-all hover:scale-[1.02] bg-[#1777bd] text-[#fefefe] shadow-lg shadow-[#1777bd]/20 hover:bg-[#084882]"
-                                >
-                                    Aceptar
-                                </button>
-                                <button
-                                    onClick={handleReject}
-                                    className="flex-1 px-4 py-2.5 rounded-lg text-sm font-medium tracking-wide border transition-all border-[#88929b]/30 text-[#88929b] hover:bg-[#88929b]/10 hover:text-[#0e0e0e]"
-                                >
-                                    Rechazar
-                                </button>
-                            </div>
+                        <p className="text-[15px] leading-relaxed text-[#88929b] font-body">
+                            Utilizamos cookies estrictamente técnicas para el correcto funcionamiento de la plataforma y recordar tus preferencias. No usamos rastreadores publicitarios.{' '}
+                            <Link
+                                to="/politica-de-cookies"
+                                onClick={() => window.scrollTo(0, 0)}
+                                className="underline decoration-1 underline-offset-4 transition-colors font-medium text-[#1777bd] hover:text-[#084882]"
+                            >
+                                Política de Cookies
+                            </Link>
+                        </p>
+
+                        <div className="flex flex-row gap-3">
+                            <button
+                                onClick={handleAccept}
+                                className="flex-1 px-2 py-3 rounded-full text-sm font-medium tracking-wide transition-all hover:scale-[1.02] bg-[#1777bd] text-[#fefefe] shadow-sm hover:bg-[#084882]"
+                            >
+                                ACEPTAR
+                            </button>
+                            <button
+                                onClick={handleReject}
+                                className="flex-1 px-2 py-3 rounded-full text-sm font-medium tracking-wide border transition-all hover:scale-[1.02] border-[#88929b]/30 text-[#0e0e0e] hover:bg-[#88929b]/10 hover:text-[#0e0e0e]"
+                            >
+                                RECHAZAR
+                            </button>
                         </div>
                     </div>
                 </motion.div>

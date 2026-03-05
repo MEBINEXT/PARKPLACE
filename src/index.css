@@ -48,8 +48,8 @@
     --sidebar-border: 210 14% 89%;
     --sidebar-ring: 205 79% 41%;
 
-    --footer-bg: 210 20% 12%;
-    --footer-foreground: 210 20% 85%;
+    --footer-bg: 205 79% 41%;
+    --footer-foreground: 0 0% 100%;
 
     --glass-bg: 0 0% 100% / 0.65;
     --glass-border: 0 0% 100% / 0.3;
@@ -77,8 +77,8 @@
     --border: 210 10% 22%;
     --input: 210 10% 22%;
     --ring: 205 79% 41%;
-    --footer-bg: 210 20% 8%;
-    --footer-foreground: 210 20% 85%;
+    --footer-bg: 205 79% 41%;
+    --footer-foreground: 0 0% 100%;
     --glass-bg: 0 0% 10% / 0.65;
     --glass-border: 0 0% 100% / 0.1;
   }
